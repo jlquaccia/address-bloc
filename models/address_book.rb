@@ -1,4 +1,4 @@
-  require_relative "entry.rb"
+require_relative "entry.rb"
 
 class AddressBook
   attr_accessor :entries
@@ -18,4 +18,12 @@ class AddressBook
 
     @entries.insert(index, Entry.new(name, phone, email))
   end
+
+  # IS THE METHOD BELOW CORRECT??? (assignment 21)
+
+  def remove_entry(entry)
+    @entries.delete(entry)
+  end
 end
+
+# ////////////////////////////////
