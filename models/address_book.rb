@@ -19,12 +19,12 @@ class AddressBook
     @entries.insert(index, Entry.new(name, phone, email))
   end
 
-  # assignment 21 - IS THIS CORRECT???
+  # assignment 21
 
   def remove_entry(index)
     @entries.delete_at(index-1)
   end
 
-  # //////////////////////////////////
+  # /////////////
 
 end
