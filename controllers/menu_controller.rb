@@ -64,7 +64,7 @@ class MenuController
     name = gets.chomp
     print "Phone Number: "
     phone = gets.chomp
-    print = "Email: "
+    print "Email: "
     email = gets.chomp
 
     @address_book.add_entry(name, phone, email)
