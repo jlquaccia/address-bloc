@@ -114,17 +114,31 @@ class MenuController
     system "clear"
     puts "Enter entry number: "
 
+
     selection = gets.to_i
 
-    @address_book.entries.select do |selection|
-      if selection
-        selection
-      elsif !selection
-        puts "No entry found"
-      else
-        puts "Invalid response, you must input a number"
-      end        
+
+
+    if selection == 0 
+      puts "Invalid response, you must input a number" 
+      return
     end
+
+    # what is the input? and what is the output?
+    # the input is the entry number
+    # the output is displaying the relative entry
+
+    result = @address_book.entries[selection-1]
+
+
+
+    # .select do |selection|
+      if result
+        puts result
+      elsif !result
+        puts "No entry found"
+      end        
+    # end
 
   end
 
