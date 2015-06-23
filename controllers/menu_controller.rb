@@ -116,7 +116,7 @@ class MenuController
 
     selection = gets.to_i
 
-    @address_book.entries.each do |selection|
+    @address_book.entries.select do |selection|
       if selection
         selection
       elsif !selection
