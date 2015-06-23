@@ -69,7 +69,7 @@ class MenuController
     name = gets.chomp
     print "Phone Number: "
     phone = gets.chomp
-    print = "Email: "
+    print "Email: "
     email = gets.chomp
 
     @address_book.add_entry(name, phone, email)
@@ -114,12 +114,9 @@ class MenuController
     system "clear"
     puts "Enter entry number: "
 
-
     selection = gets.to_i
 
-
-
-    if selection == 0 
+    if selection == 0 # b/c if you call .to_i on a string it will convert to 0
       puts "Invalid response, you must input a number" 
       return
     end
@@ -130,16 +127,11 @@ class MenuController
 
     result = @address_book.entries[selection-1]
 
-
-
-    # .select do |selection|
-      if result
-        puts result
-      elsif !result
-        puts "No entry found"
-      end        
-    # end
-
+    if result
+      puts result
+    elsif !result
+      puts "No entry found"
+    end
   end
 
   # ///////////////
