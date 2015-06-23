@@ -40,7 +40,7 @@ RSpec.describe AddressBook do
     end
   end
 
-  # assignment 21 - IS THIS CORRECT???
+  # assignment 21 - This needs to be fixed, won't worry about it for now though...
   
   context ".remove_entry" do
     it "removes only one entry from the address book" do

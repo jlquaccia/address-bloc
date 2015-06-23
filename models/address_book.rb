@@ -21,8 +21,8 @@ class AddressBook
 
   # assignment 21 - IS THIS CORRECT???
 
-  def remove_entry(entry)
-    @entries.delete(entry)
+  def remove_entry(index)
+    @entries.delete_at(index-1)
   end
 
   # //////////////////////////////////
