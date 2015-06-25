@@ -13,7 +13,8 @@ class MenuController
     puts "2 - Create an entry"
     puts "3 - Search for an entry"
     puts "4 - Import entries from a CSV"
-    puts "5 - Exit"
+    puts "5 - MURDER ALL ENTRIES"
+    puts "6 - Exit"
     print "Enter your selection: "
 
     selection = gets.to_i
@@ -36,6 +37,31 @@ class MenuController
       read_csv
       main_menu
     when 5
+      system "clear"
+      print "Are you sure?"
+      puts "\ny - murder all"
+      puts "n - spare for now"
+
+      answer = gets.chomp
+
+      case answer
+      when "y"
+        system "clear"
+        @address_book.entries.each do |entry|
+          self.delete(entry)
+        end
+        puts "All entries have been completely murdered"
+        main_menu
+      when "n"
+        system "clear"
+        puts "You know what to do if you change your mind.."
+        main_menu
+      else
+        system "clear"
+        puts "Sorry, that is not a valid input"
+        main_menu
+      end
+    when 6
       puts "Good-bye!"
       exit(0)
     else
