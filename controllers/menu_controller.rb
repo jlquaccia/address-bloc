@@ -61,9 +61,11 @@ class MenuController
           puts "There is nothing to murder"
           main_menu
         else
-          @address_book.entries.each do |entry|
-            delete_entry(entry)
+          while(@address_book.entries.length > 0)
+            delete_entry(@address_book.entries[0])
           end
+
+          # @address_book.entries = []
           puts "All entries have been completely murdered"
           main_menu
         end
